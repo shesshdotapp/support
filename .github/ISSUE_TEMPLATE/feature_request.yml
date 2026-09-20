@@ -1,0 +1,59 @@
+name: Feature request
+description: Suggest an improvement or new shessh workflow.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is the central public support desk for shessh.
+
+        Use this template for feature ideas and workflow improvements. For setup help or troubleshooting, start a Discussion instead:
+        https://github.com/shesshdotapp/support/discussions
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      placeholder: Describe the workflow or friction.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested solution
+      placeholder: Describe the feature, behavior, or UI you want.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - SFTP
+        - Terminal
+        - SSH config
+        - Keychain
+        - Tabs
+        - Split panes
+        - Port forwarding
+        - Installer or update
+        - Website or download
+        - Support workflow
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Any workaround or similar app behavior you like?
+    validations:
+      required: false
+  - type: textarea
+    id: priority
+    attributes:
+      label: Why does this matter?
+      placeholder: How often would you use it, and what does it unblock?
+    validations:
+      required: false

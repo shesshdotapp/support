@@ -1,0 +1,108 @@
+name: Performance or memory issue
+description: Report high memory use, CPU use, freezes, rendering lag, or stability problems.
+title: "[Performance]: "
+labels:
+  - bug
+  - performance
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for memory growth, high CPU, terminal lag, freezes, or long-running stability problems.
+
+        Do not include passwords, private keys, tokens, or sensitive server details.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Memory keeps increasing after one SSH tab stays open for several hours.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Shessh version
+      placeholder: 1.10.21
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS version
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model and chip
+      placeholder: MacBook Pro M3 Pro, 18 GB RAM
+    validations:
+      required: false
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue type
+      options:
+        - Memory grows over time
+        - High CPU
+        - App freezes
+        - Terminal rendering lag
+        - Slow connection or reconnect
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: How long was shessh running?
+      placeholder: 10 minutes / 2 hours / all day
+    validations:
+      required: true
+  - type: input
+    id: workspace_size
+    attributes:
+      label: Tabs and split panes
+      placeholder: 1 tab, no split / 4 tabs, 2 split panes / etc.
+    validations:
+      required: true
+  - type: textarea
+    id: activity
+    attributes:
+      label: What was happening in the terminal?
+      placeholder: Idle shell / streaming logs / running top / reconnecting / large output
+    validations:
+      required: true
+  - type: textarea
+    id: numbers
+    attributes:
+      label: Activity Monitor numbers
+      description: Share approximate memory, CPU, or energy values if available.
+      placeholder: Memory 180 MB to 900 MB over 2 hours, CPU 60%, etc.
+    validations:
+      required: false
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Triggers
+      placeholder: Happens after sleep-wake / resizing / switching tabs / opening split / network drop
+    validations:
+      required: false
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open shessh
+        2. Connect to ...
+        3. Leave terminal idle for ...
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, screen recordings, or logs
+      description: Remove secrets before attaching screenshots or logs.
+      placeholder: Add Activity Monitor screenshot or sanitized details if useful.
+    validations:
+      required: false

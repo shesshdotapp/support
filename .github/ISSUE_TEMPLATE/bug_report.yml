@@ -1,0 +1,156 @@
+name: Bug report
+description: Report a reproducible shessh problem.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve shessh.
+
+        This repository is the central public support desk for shessh.
+        Reporting guide: https://github.com/shesshdotapp/support/blob/main/docs/reporting.md
+
+        Do not include passwords, private keys, tokens, or sensitive server details.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One short sentence that explains the bug.
+      placeholder: Split pane becomes blank after closing a duplicate VPS tab.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Shessh version
+      description: "Example: 1.10.21"
+      placeholder: 1.10.21
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      description: "Example: macOS 15.6 or macOS 26"
+      placeholder: macOS version
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model and chip
+      description: "Example: MacBook Pro M3 Pro"
+      placeholder: Mac model and chip
+    validations:
+      required: false
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Blocks me completely
+        - Breaks one workflow
+        - Annoying but has a workaround
+        - Visual or copy issue
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Connection
+        - Authentication
+        - Keychain
+        - SSH config import
+        - Tabs
+        - Split panes
+        - Terminal rendering
+        - Reconnect
+        - Installer or update
+        - Performance or memory
+        - Website or download
+        - Crash or freeze
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: auth
+    attributes:
+      label: Authentication type
+      options:
+        - Password
+        - Identity file
+        - SSH agent
+        - SSH config import
+        - Local terminal
+        - Not related to login
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps that trigger the issue.
+      placeholder: |
+        1. Open shessh
+        2. Connect to ...
+        3. Click ...
+    validations:
+      required: true
+  - type: textarea
+    id: last_working
+    attributes:
+      label: Last known working version
+      placeholder: It worked in 1.10.20 / never worked / not sure
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      placeholder: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      placeholder: What happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      placeholder: Every time, sometimes, only after sleep/wake, only on one VPS, etc.
+    validations:
+      required: false
+  - type: textarea
+    id: config_source
+    attributes:
+      label: Profile source
+      description: Tell us whether this VPS was added manually or imported from SSH config.
+      placeholder: Manual profile / imported from ~/.ssh/config / imported from another config file
+    validations:
+      required: false
+  - type: textarea
+    id: terminal
+    attributes:
+      label: Does macOS Terminal work with the same host?
+      description: If relevant, tell us whether `ssh user@host` works in Terminal.
+      placeholder: Terminal works / Terminal also fails / Not related
+    validations:
+      required: false
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, logs, or extra context
+      description: Remove secrets before attaching logs or screenshots.
+      placeholder: Add anything else that helps explain the issue.
+    validations:
+      required: false

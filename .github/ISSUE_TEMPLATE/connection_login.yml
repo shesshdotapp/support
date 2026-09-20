@@ -1,0 +1,120 @@
+name: Connection or login issue
+description: Report SSH connection, password, key, agent, Keychain, or reconnect problems.
+title: "[Connection]: "
+labels:
+  - bug
+  - connection
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when shessh cannot connect, asks for a password unexpectedly, rejects credentials, or reconnects incorrectly.
+
+        Do not include passwords, private keys, tokens, or sensitive server details.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Password is requested again even though Remember in Keychain is enabled.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Shessh version
+      placeholder: 1.10.21
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS version
+    validations:
+      required: true
+  - type: dropdown
+    id: auth
+    attributes:
+      label: Authentication type
+      options:
+        - Password
+        - Identity file
+        - SSH agent
+        - SSH config import
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: profile_source
+    attributes:
+      label: Profile source
+      options:
+        - Added manually in shessh
+        - Imported from ~/.ssh/config
+        - Imported from another SSH config file
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: terminal_result
+    attributes:
+      label: Does macOS Terminal connect to the same host?
+      options:
+        - Yes, Terminal works
+        - No, Terminal also fails
+        - I have not tested Terminal
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: terminal_command
+    attributes:
+      label: Terminal command tested
+      description: Remove real hostnames or usernames if needed.
+      placeholder: ssh user@example.com -p 22
+    validations:
+      required: false
+  - type: dropdown
+    id: keychain
+    attributes:
+      label: Keychain setting
+      options:
+        - Remember in Keychain is enabled
+        - Remember in Keychain is disabled
+        - Not using password login
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open shessh
+        2. Select ...
+        3. Click Connect
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: Error message or behavior
+      placeholder: Paste the visible error message, without secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: network
+    attributes:
+      label: Network context
+      placeholder: Same Wi-Fi / VPN enabled / after sleep-wake / unstable network / only one VPS
+    validations:
+      required: false
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots or logs
+      description: Remove secrets before attaching screenshots or logs.
+      placeholder: Add screenshots or sanitized logs if useful.
+    validations:
+      required: false
+

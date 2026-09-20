@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and troubleshooting
+    url: https://github.com/shesshdotapp/support/discussions
+    about: Ask setup questions, get help, or confirm whether something is expected behavior.
+  - name: Reporting guide
+    url: https://github.com/shesshdotapp/support/blob/main/docs/reporting.md
+    about: Read this first if you are unsure whether to open an Issue or Discussion.
+  - name: Website
+    url: https://shessh.app
+    about: Download shessh and read product information.
