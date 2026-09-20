@@ -1,104 +1,47 @@
-# Reporting Guide
+# Reporting guide
 
-This repository is the central public place for shessh support.
+## Open a form
 
-## Use Discussions For
+Start at [New issue](https://github.com/shesshdotapp/support/issues/new/choose), choose a form, fill in the fields, and submit.
+Questions, bugs, feature requests, and feedback all stay in **Issues**, so you can track them in one place.
+GitHub sign-in is required to submit. English and Bahasa Indonesia are welcome.
 
-- Setup questions
-- Login troubleshooting
-- SSH config import questions
-- Keychain behavior questions
-- Installer and update questions
-- Asking whether something is expected
-- Sharing general feedback
-
-Start here when you are not sure whether the problem is a bug:
-
-https://github.com/shesshdotapp/support/discussions
-
-## Use Issues For
-
-- Reproducible bugs
-- Crashes
-- Blank terminal panes
-- Failed reconnect behavior
-- Broken download or installer behavior
-- Performance or memory problems
-- UI issues with clear screenshots or steps
-
-Open an Issue here:
-
-https://github.com/shesshdotapp/support/issues
-
-## Choose A Template
-
-| Template | Use it for |
+| Form | When to use it |
 | --- | --- |
-| Bug report | General reproducible app bugs |
-| Connection or login issue | SSH login, password, identity file, SSH agent, Keychain, reconnect |
-| Performance or memory issue | Memory growth, high CPU, freezes, terminal lag |
-| Feature request | New workflows, UI improvements, planned feature ideas |
+| [Bug report](https://github.com/shesshdotapp/support/issues/new?template=bug_report.yml) | Something looks wrong or does not work, including the website or installer |
+| [Feature request](https://github.com/shesshdotapp/support/issues/new?template=feature_request.yml) | A new capability or a change to an existing workflow |
+| [Connection or login](https://github.com/shesshdotapp/support/issues/new?template=connection_login.yml) | Connecting, passwords, identity files, SSH agent, Keychain, or reconnect |
+| [Performance or memory](https://github.com/shesshdotapp/support/issues/new?template=performance_memory.yml) | High memory or CPU, freezes, or lag |
+| [Ask for help](https://github.com/shesshdotapp/support/issues/new?template=help_question.yml) | Setup questions, unexpected behavior, or uncertainty about which form to choose |
+| [Feedback](https://github.com/shesshdotapp/support/issues/new?template=feedback.yml) | General feedback or a topic not covered by the other forms |
 
-## What Makes A Good Bug Report
+You do not need to diagnose the cause. If you cannot reproduce a problem, describe what happened before you noticed it.
+Write “Not sure” for unavailable information. Fields marked as optional can be left blank.
 
-Include:
+## Make the report easy to understand
 
-- Shessh version
-- macOS version
-- Mac model and chip
-- Authentication type
-- Whether the host was imported from `~/.ssh/config`
-- Steps to reproduce
-- Expected result
-- Actual result
-- How often it happens
+Use a specific title, such as:
 
-For connection bugs, also include whether this works in macOS Terminal:
+- `[Bug]: Terminal becomes blank after closing a duplicate VPS tab`
+- `[Feature]: Transfer files between my Mac and VPS using SFTP`
+- `[Question]: How do I import a host from my SSH config?`
 
-```sh
-ssh user@host
-```
+For bugs, explain what you did, what happened, and what you expected. Include the app and macOS versions if relevant.
+For features, describe the task you want to complete and how the proposed change would help.
+One issue should cover one problem or feature. Search [existing issues](https://github.com/shesshdotapp/support/issues) before submitting a duplicate.
 
-## What Not To Post
+## Optional troubleshooting
 
-Do not post:
+The [troubleshooting guide](troubleshooting.md) can help you collect useful details.
+Testing the same connection in macOS Terminal is helpful for connection problems, but it is not required to ask for help.
 
-- VPS passwords
-- Private keys
-- API tokens
-- Recovery keys
-- Full server inventories
-- Logs containing credentials
-- Screenshots with secret values
+## Screenshots and logs
 
-Redact sensitive values before uploading screenshots or logs.
+Remove passwords, private keys, tokens, and private server details before uploading.
+Use placeholders such as `user@example.com` instead of real login details.
+Sensitive vulnerabilities follow the separate [security reporting guide](../SECURITY.md).
 
-## Issue Scope
+## Follow-up
 
-Use one issue per problem.
-
-Good:
-
-- "Split pane becomes blank after closing duplicate VPS tab"
-- "Keychain password is requested again after reconnect"
-
-Too broad:
-
-- "Several terminal bugs"
-- "Login, tabs, and installer problems"
-
-## Status Labels
-
-Issues may be labeled by area or status:
-
-- `bug`
-- `enhancement`
-- `question`
-- `needs-info`
-- `connection`
-- `authentication`
-- `keychain`
-- `terminal`
-- `performance`
-- `installer`
-- `website`
+The maintainer may ask for missing details, link a duplicate, or update the issue when a fix is available.
+Reply in the original issue. Feature requests are not promises of a release date.

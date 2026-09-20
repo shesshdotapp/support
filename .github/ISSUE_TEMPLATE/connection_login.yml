@@ -1,4 +1,4 @@
-name: Connection or login issue
+name: Connection or login help
 description: Report SSH connection, password, key, agent, Keychain, or reconnect problems.
 title: "[Connection]: "
 labels:
@@ -9,6 +9,8 @@ body:
     attributes:
       value: |
         Use this when shessh cannot connect, asks for a password unexpectedly, rejects credentials, or reconnects incorrectly.
+
+        English and Bahasa Indonesia are welcome. Write "Not sure" for details you do not know.
 
         Do not include passwords, private keys, tokens, or sensitive server details.
   - type: input
@@ -40,7 +42,6 @@ body:
         - Password
         - Identity file
         - SSH agent
-        - SSH config import
         - Not sure
     validations:
       required: true
@@ -89,6 +90,7 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce
+      description: If it happened only once, describe what you were doing at the time.
       placeholder: |
         1. Open shessh
         2. Select ...

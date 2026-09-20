@@ -1,0 +1,48 @@
+name: Ask for help
+description: Ask a question, troubleshoot setup, or start here if you are unsure.
+title: "[Question]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask here even if you do not know whether the problem is a bug.
+        English and Bahasa Indonesia are welcome. Remove passwords, keys, tokens, and private server details.
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      placeholder: I want to import a host from my SSH config. Which option should I choose?
+    validations:
+      required: true
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Installing or updating
+        - Connecting or authentication
+        - SSH config or identity files
+        - Saved passwords or Keychain
+        - Tabs, split panes, or terminal
+        - Website or download
+        - Other or not sure
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried? (optional)
+      description: Include what happened or any visible error message.
+      placeholder: I selected the config file, but no hosts appeared in the list.
+  - type: input
+    id: environment
+    attributes:
+      label: App and macOS versions (optional)
+      placeholder: shessh version, macOS version, or Not sure
+  - type: textarea
+    id: context
+    attributes:
+      label: Screenshots or extra context (optional)
+      description: You can attach screenshots here after removing private information.

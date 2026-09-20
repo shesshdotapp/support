@@ -10,6 +10,8 @@ body:
       value: |
         Use this for memory growth, high CPU, terminal lag, freezes, or long-running stability problems.
 
+        English and Bahasa Indonesia are welcome. Estimates are enough; write "Not sure" if needed.
+
         Do not include passwords, private keys, tokens, or sensitive server details.
   - type: input
     id: summary

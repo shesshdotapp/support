@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible shessh problem.
+description: Report something broken in the app, installer, or website.
 title: "[Bug]: "
 labels:
   - bug
@@ -7,150 +7,77 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve shessh.
-
-        This repository is the central public support desk for shessh.
-        Reporting guide: https://github.com/shesshdotapp/support/blob/main/docs/reporting.md
-
-        Do not include passwords, private keys, tokens, or sensitive server details.
-  - type: input
-    id: summary
+        Describe what went wrong; you do not need to know its cause.
+        English and Bahasa Indonesia are welcome. Write "Not sure" for details you do not know.
+        Remove passwords, keys, tokens, and private server details from screenshots and logs.
+  - type: dropdown
+    id: area
     attributes:
-      label: Summary
-      description: One short sentence that explains the bug.
-      placeholder: Split pane becomes blank after closing a duplicate VPS tab.
+      label: Where does the problem happen?
+      options:
+        - Tabs or split panes
+        - Terminal display or keyboard shortcuts
+        - Connection or authentication
+        - Saved passwords or Keychain
+        - SSH config import
+        - Installer or update
+        - Website or download
+        - Crash, freeze, or performance
+        - Other or not sure
     validations:
       required: true
   - type: input
     id: version
     attributes:
       label: Shessh version
-      description: "Example: 1.10.21"
-      placeholder: 1.10.21
+      description: Use the version shown in About shessh. For a website-only issue, enter "Website".
+      placeholder: 1.10.21 / Website / Not sure
     validations:
       required: true
   - type: input
-    id: macos
+    id: environment
     attributes:
-      label: macOS version
-      description: "Example: macOS 15.6 or macOS 26"
-      placeholder: macOS version
-    validations:
-      required: true
-  - type: input
-    id: mac
-    attributes:
-      label: Mac model and chip
-      description: "Example: MacBook Pro M3 Pro"
-      placeholder: Mac model and chip
-    validations:
-      required: false
-  - type: dropdown
-    id: impact
-    attributes:
-      label: Impact
-      options:
-        - Blocks me completely
-        - Breaks one workflow
-        - Annoying but has a workaround
-        - Visual or copy issue
-        - Not sure
-    validations:
-      required: true
-  - type: dropdown
-    id: area
-    attributes:
-      label: Area
-      options:
-        - Connection
-        - Authentication
-        - Keychain
-        - SSH config import
-        - Tabs
-        - Split panes
-        - Terminal rendering
-        - Reconnect
-        - Installer or update
-        - Performance or memory
-        - Website or download
-        - Crash or freeze
-        - Other
-    validations:
-      required: true
-  - type: dropdown
-    id: auth
-    attributes:
-      label: Authentication type
-      options:
-        - Password
-        - Identity file
-        - SSH agent
-        - SSH config import
-        - Local terminal
-        - Not related to login
-        - Not sure
+      label: Operating system and device
+      description: Include your browser for website problems.
+      placeholder: macOS 26, MacBook Pro M3 / Windows 11, Chrome / Not sure
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
-      description: List the exact steps that trigger the issue.
+      label: What did you do?
+      description: List the steps. If it happened only once, describe what you were doing at the time.
       placeholder: |
-        1. Open shessh
-        2. Connect to ...
-        3. Click ...
-    validations:
-      required: true
-  - type: textarea
-    id: last_working
-    attributes:
-      label: Last known working version
-      placeholder: It worked in 1.10.20 / never worked / not sure
-    validations:
-      required: false
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected result
-      placeholder: What should have happened?
+        1. Connect to the same VPS twice.
+        2. Split the terminals side by side.
+        3. Close one of the tabs.
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: Actual result
-      placeholder: What happened instead?
+      label: What happened?
+      placeholder: The remaining terminal is blank, even though the connection is still open.
     validations:
       required: true
   - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+      placeholder: The remaining terminal should stay visible and usable.
+    validations:
+      required: true
+  - type: dropdown
     id: frequency
     attributes:
-      label: How often does it happen?
-      placeholder: Every time, sometimes, only after sleep/wake, only on one VPS, etc.
-    validations:
-      required: false
-  - type: textarea
-    id: config_source
-    attributes:
-      label: Profile source
-      description: Tell us whether this VPS was added manually or imported from SSH config.
-      placeholder: Manual profile / imported from ~/.ssh/config / imported from another config file
-    validations:
-      required: false
-  - type: textarea
-    id: terminal
-    attributes:
-      label: Does macOS Terminal work with the same host?
-      description: If relevant, tell us whether `ssh user@host` works in Terminal.
-      placeholder: Terminal works / Terminal also fails / Not related
-    validations:
-      required: false
+      label: How often does this happen? (optional)
+      options:
+        - Every time
+        - Sometimes
+        - Only once so far
+        - Not sure
   - type: textarea
     id: attachments
     attributes:
-      label: Screenshots, logs, or extra context
-      description: Remove secrets before attaching logs or screenshots.
-      placeholder: Add anything else that helps explain the issue.
-    validations:
-      required: false
+      label: Screenshots, logs, or extra context (optional)
+      description: Include a workaround or the last working version if known. Remove private information.

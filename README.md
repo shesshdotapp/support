@@ -1,69 +1,38 @@
 # Shessh Support
 
-Welcome to Shessh Support.
+Report a problem, request a feature, or ask for help with [shessh](https://shessh.app).
+All public support requests are tracked in this repository's **Issues**.
 
-This public repository is the central support desk for shessh.
+## What do you need?
 
-Use this repository for every public shessh support request:
+Choose a form below. Each link opens a ready-to-fill form with questions and examples.
+Sign in to GitHub to submit. English and Bahasa Indonesia are welcome.
 
-- Report bugs
-- Ask questions
-- Request features
-- Share feedback
-- Track known issues
-
-## Start Here
-
-| Need | Use |
+| I want to… | Open this form |
 | --- | --- |
-| Setup help or troubleshooting | GitHub Discussions |
-| Confirmed bug with reproducible steps | GitHub Issues |
-| Feature idea or workflow request | Feature Request |
-| Crash, blank terminal, freeze, or memory issue | Bug Report |
-| Sensitive security report | See `SECURITY.md` first |
+| Report something broken in the app, installer, or website | [Report a bug](https://github.com/shesshdotapp/support/issues/new?template=bug_report.yml) |
+| Suggest a new feature or improvement | [Request a feature](https://github.com/shesshdotapp/support/issues/new?template=feature_request.yml) |
+| Fix SSH login, saved passwords, or reconnect problems | [Connection or login help](https://github.com/shesshdotapp/support/issues/new?template=connection_login.yml) |
+| Report high memory, CPU, freezes, or terminal lag | [Performance or memory report](https://github.com/shesshdotapp/support/issues/new?template=performance_memory.yml) |
+| Ask a question or get help choosing the right form | [Ask for help](https://github.com/shesshdotapp/support/issues/new?template=help_question.yml) |
+| Share feedback or anything that does not fit above | [Share feedback](https://github.com/shesshdotapp/support/issues/new?template=feedback.yml) |
 
-## Public Support Links
+**Not sure?** Use **Ask for help**. You do not need to confirm a bug or identify its cause first.
 
-- Discussions: https://github.com/shesshdotapp/support/discussions
-- Issues: https://github.com/shesshdotapp/support/issues
-- Website: https://shessh.app
+[Browse existing reports](https://github.com/shesshdotapp/support/issues) · [View all forms](https://github.com/shesshdotapp/support/issues/new/choose) · [Download shessh](https://shessh.app)
 
-## Reporting Rules
+## Before submitting
 
-One report should describe one problem.
+- Search existing reports. If you find the same problem, add your details there.
+- Keep one problem or feature per issue.
+- Fill in what you know. Use “Not sure” when information is unavailable.
+- Remove passwords, private keys, tokens, and private server details from screenshots and logs.
 
-Before opening a bug, check whether the same issue already exists.
+For sensitive vulnerabilities, read the [security reporting guide](SECURITY.md) instead of posting details publicly.
 
-Use Discussions when you are not sure whether something is a bug.
+## What happens next?
 
-Use Issues when you can explain the exact behavior and how to reproduce it.
+The maintainer reviews your report and may ask follow-up questions in the same issue.
+Reply there to keep the history together. Feature requests are reviewed, but submission does not guarantee a release date.
 
-Do not share passwords, private keys, access tokens, recovery keys, or sensitive server details.
-
-If a screenshot or log includes private information, remove it before posting.
-
-Useful bug reports include:
-
-- Shessh version
-- macOS version
-- Mac model and chip
-- Authentication type: password, identity file, SSH agent, or SSH config
-- Steps to reproduce
-- Expected result
-- Actual result
-- Screenshots, screen recordings, or logs when useful
-
-Read the full reporting guide: `docs/reporting.md`.
-
-## Good First Checks
-
-Before opening a bug, try:
-
-- Install the latest shessh release from https://shessh.app
-- Confirm the same host works from macOS Terminal with `ssh user@host`
-- Check whether the issue happens after restart
-- Check whether it only happens on one VPS or every VPS
-
-## Security
-
-Read `SECURITY.md` before sharing anything sensitive.
+[Reporting guide](docs/reporting.md) · [Troubleshooting](docs/troubleshooting.md)

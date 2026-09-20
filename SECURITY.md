@@ -1,16 +1,8 @@
-# Security
+# Security reporting
 
-Do not post sensitive security details in public Issues or Discussions.
+Do not include vulnerability details, credentials, private keys, or exploit instructions in public issues.
 
-Sensitive details include:
-
-- Passwords
-- Private keys
-- Tokens
-- Server access details
-- Exploit steps
-- Logs containing secrets
-
-Until a dedicated support email is available, open a short public Discussion that says you need a private channel.
-
-Do not include credentials, server addresses, exploit details, or private logs in that public post.
+If the repository's **Security** tab offers **Report a vulnerability**, use that private reporting form.
+If that option is unavailable, open [Ask for help](https://github.com/shesshdotapp/support/issues/new?template=help_question.yml)
+with the title **Private security contact requested** and only ask for a private contact channel.
+Wait for the maintainer to arrange that channel before sharing the report.

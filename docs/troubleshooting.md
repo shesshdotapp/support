@@ -1,6 +1,6 @@
 # Troubleshooting
 
-These checks help narrow down common shessh issues before opening a report.
+These optional checks help narrow down common shessh issues. You can [ask for help](https://github.com/shesshdotapp/support/issues/new?template=help_question.yml) without completing them.
 
 ## Connection Fails
 
@@ -12,7 +12,7 @@ ssh user@host
 
 If Terminal also fails, the issue is likely with the server, network, credentials, firewall, or SSH configuration.
 
-If Terminal works but shessh fails, open a bug report and include:
+If Terminal works but shessh fails, open a [connection report](https://github.com/shesshdotapp/support/issues/new?template=connection_login.yml) and include:
 
 - Shessh version
 - macOS version
@@ -28,7 +28,7 @@ If the profile was not used for more than the credential expiry window, shessh m
 
 ## Blank Terminal Or Split Pane
 
-Open a bug report with:
+Open a [bug report](https://github.com/shesshdotapp/support/issues/new?template=bug_report.yml) with:
 
 - Number of tabs
 - Number of split panes
@@ -38,7 +38,7 @@ Open a bug report with:
 
 ## High Memory Use
 
-Open a bug report with:
+Open a [performance report](https://github.com/shesshdotapp/support/issues/new?template=performance_memory.yml) with:
 
 - Number of tabs and split panes
 - How long shessh was running

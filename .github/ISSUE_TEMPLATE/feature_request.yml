@@ -9,20 +9,21 @@ body:
       value: |
         This repository is the central public support desk for shessh.
 
-        Use this template for feature ideas and workflow improvements. For setup help or troubleshooting, start a Discussion instead:
-        https://github.com/shesshdotapp/support/discussions
+        Use this form for feature ideas and workflow improvements. English and Bahasa Indonesia are welcome.
+        For setup help, use Ask for help:
+        https://github.com/shesshdotapp/support/issues/new?template=help_question.yml
   - type: textarea
     id: problem
     attributes:
       label: What problem should this solve?
-      placeholder: Describe the workflow or friction.
+      placeholder: I switch between a terminal and a separate app to upload files to my VPS.
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
       label: Suggested solution
-      placeholder: Describe the feature, behavior, or UI you want.
+      placeholder: Add an SFTP file browser beside the terminal so I can upload and download files.
     validations:
       required: true
   - type: dropdown

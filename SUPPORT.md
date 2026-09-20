@@ -1,71 +1,16 @@
-# Support Guide
+# Get support
 
-Use this repository as the central public support desk for shessh.
+All public shessh support requests use the same [issue form chooser](https://github.com/shesshdotapp/support/issues/new/choose).
 
-## Quick Routing
+- [Report a bug](https://github.com/shesshdotapp/support/issues/new?template=bug_report.yml)
+- [Request a feature](https://github.com/shesshdotapp/support/issues/new?template=feature_request.yml)
+- [Connection or login help](https://github.com/shesshdotapp/support/issues/new?template=connection_login.yml)
+- [Performance or memory report](https://github.com/shesshdotapp/support/issues/new?template=performance_memory.yml)
+- [Ask for help](https://github.com/shesshdotapp/support/issues/new?template=help_question.yml)
+- [Share feedback](https://github.com/shesshdotapp/support/issues/new?template=feedback.yml)
 
-| If you need to... | Go to... |
-| --- | --- |
-| Ask how something works | Discussions |
-| Get help with setup or login | Discussions |
-| Confirm whether behavior is expected | Discussions |
-| Report a reproducible app bug | Issues |
-| Request a new workflow or feature | Feature Request |
-| Report a sensitive security issue | `SECURITY.md` |
+If unsure which form to use, choose **Ask for help**. You do not need to prove the problem is a bug.
+English and Bahasa Indonesia are welcome. Keep replies and follow-up details in the same issue.
 
-## Questions And Troubleshooting
-
-Start a GitHub Discussion when you want to ask about:
-
-- Installing or updating shessh
-- Adding a VPS profile
-- Importing from `~/.ssh/config`
-- Password, identity file, or SSH agent login
-- Keychain behavior
-- Tabs, split panes, reconnect, or terminal behavior
-- Whether something is expected behavior
-
-## Bugs
-
-Open an Issue when you can describe:
-
-- What you did
-- What happened
-- What you expected to happen
-- Whether it happens again after retrying
-
-Please include the shessh version, macOS version, authentication type, and steps to reproduce.
-
-Keep each issue focused on one problem. If you found two unrelated bugs, open two issues.
-
-Use the specific Connection or Performance template when it matches. Those templates collect the extra details needed to debug SSH login and stability problems faster.
-
-## Feature Requests
-
-Open a Feature Request for ideas such as:
-
-- SFTP workflows
-- Port forwarding
-- Workspace improvements
-- Import/export behavior
-- Keyboard shortcuts
-- Release or installer improvements
-
-## Sensitive Details
-
-Do not post:
-
-- VPS passwords
-- Private keys
-- Tokens
-- Full server inventories
-- Logs that contain credentials
-- Screenshots with secret values
-
-Hostnames and IP addresses can be useful, but only share them when they are safe to make public.
-
-## Links
-
-- Discussions: https://github.com/shesshdotapp/support/discussions
-- Issues: https://github.com/shesshdotapp/support/issues
-- Website: https://shessh.app
+Read the [reporting guide](docs/reporting.md) for examples, or [troubleshooting](docs/troubleshooting.md) for optional checks.
+For sensitive vulnerabilities, use the [security reporting guide](SECURITY.md).
