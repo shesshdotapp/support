@@ -36,3 +36,7 @@ The maintainer reviews your report and may ask follow-up questions in the same i
 Reply there to keep the history together. Feature requests are reviewed, but submission does not guarantee a release date.
 
 [Reporting guide](docs/reporting.md) · [Troubleshooting](docs/troubleshooting.md)
+
+## Support shessh
+
+If shessh helps your workflow, you can support its development on [Ko-fi](https://ko-fi.com/shesshdotapp).
